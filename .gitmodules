@@ -1,4 +1,1 @@
 
-[submodule "hm-core"]
-	path = hm-core
-	url = git@github.com:humanmade/hm-core.git

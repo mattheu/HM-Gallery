@@ -1,61 +1,51 @@
-=== HM Portfolio ===
-Contributors: humanmade, joehoyle, mattheu, tcrsavage, willmot
-Tags: portfolio, hm-portfolio, jh, humanmade, hmportfolio, gallery
+=== HM Gallery ===
+Contributors: mattheu
+Tags: gallery, hm-gallery, jh, humanmade, hmgortfolio, gallery
 Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 1.1.1
+Tested up to: 3.3.1
+Stable tag: 1.0
 
-Gallery and Portfolio management for your WordPress site. 
+Gallery and Gallery management for your WordPress site. 
 
 == Description ==
 
-Portfolio management for your WordPress site. HM Portfolio allows you to manage a gallery of images from the Add New/Edit Entry Page of the Wordpress admin. It also creates a Portfolio post type that can be used to keep it separate from the main blog posts. The gallery management box can also be enabled for other post types. 
+Gallery management for your WordPress site. HM Gallery allows you to manage a gallery of images from the Add New/Edit Entry Page of the Wordpress admin.
 
 This plugin is aimed at theme developers as it requires some knowledge of editing template files. No CSS styles are applied, allowing full customisation by the developer. 
 
-This plugin is a fork of the JH Portfolio Plugin. It will prompt you to upgrade all the database entries - but it may require you to edit the theme files. 
+This plugin is a fork of the HM Portfolio Plugin. It may work, but compatability is not guaranteed.
 
-Support questions should be made using the wordpress support forums: http://wordpress.org/tags/hm-portfolio?forum_id=10
-
-Report any issues/feature requests here: https://github.com/humanmade/HM-Portfolio issues or you can twitter #humanmadeltd for feedback etc.
+Report any issues/feature requests here: https://github.com/humanmade/HM-Gallery issues or you can twitter @humanmadeltd for feedback etc.
 
 = Features =
 
 * Enables an image gallery management box in the edit post admin page. 
 * Automatic server-side thumbnail generation for all image sizes
-* Creates a Portfolio post type.
-* Also works on all other post types. 
-
-== Upgrade Notice ==
-
-* The Plugin will allow you to update all the database entries from JH Portfolio plugin, but you will need to edit your theme files to work with this plugin. 
+* Works on all post types - just select which ones you want. 
+* Can be used to manage to featured image.
 
 == Changelog ==
 
-= 1.1 =
-* Can use HM Portfolio to manage the post featured image. 
-* Switch to using HM Core & WPThumb
-
 = 1.0 =
-* Forked JH Portfolio.
-* Removed a lot. 
+* Forked HM Portfolio
+* Removed a lot - all but the very core functionality.. 
 * Rewritten some. 
 * Added some new features.
 
 == Screenshots ==
 
 1. The Gallery box on the Add New/Edit Entry page.
-2. The HM Portfolio Settings page
-3. The Portfolio post type page
+2. The HM Gallery Settings page
+3. The Gallery post type page
 
 == Installation ==
 
-1. Upload the `hm-portfolio` folder to the `/wp-content/plugins/` directory
+1. Upload the `hm-gallery` folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. You must enable "Pretty Permalinks" for the single portfolio pages to work
+3. You must enable "Pretty Permalinks" for the single gallery pages to work
 
 = The plugin doesn't work, what do I do? =
 
-Support questions should be made using the wordpress support forums: http://wordpress.org/tags/hm-portfolio?forum_id=10
+Support questions should be made using the wordpress support forums: http://wordpress.org/tags/hm-gallery?forum_id=10
 
-Visit the Issues page of the plugin homepage at: https://github.com/humanmade/HM-Portfolio/issues
+Visit the Issues page of the plugin homepage at: https://github.com/humanmade/HM-Gallery/issues
