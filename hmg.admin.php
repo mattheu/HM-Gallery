@@ -103,7 +103,7 @@ function hmg_options_page() {
 		</form>
 		
 		<div id="message">
-			<p><small>If you are having any issue with HM Gallery please file a bug or question <a href="https://github.com/humanmade/HM-Gallery" target="_blank">here.</a><small></small></p>
+			<p><small>If you are having any issue with HM Gallery please file a bug or question <a href="https://github.com/mattheu/HM-Gallery" target="_blank">here.</a><small></small></p>
 		</div>
 	</div>
 	<?php
