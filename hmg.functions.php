@@ -27,7 +27,7 @@ function hmg_the_gallery ( $post_id = null, $size = array(), $before = null, $af
 		
 			?>
 	
-			<a href="<?php echo reset( wp_get_attachment_image_src( $attachment_id, 'full' ) ); ?>">
+			<a href="<?php echo reset( wp_get_attachment_image_src( $attachment_id, 'full' ) ); ?>" rel="hm-gallery-<?php echo $post_id; ?>">
 				<?php echo $image; ?>
 			</a>
 		
