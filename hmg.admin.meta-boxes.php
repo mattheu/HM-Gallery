@@ -24,7 +24,10 @@ function hmg_gallery_meta_box( $post ) {
 
 function hmg_gallery_meta_box_submitted( $post_id ) {
 
-	if ( ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) || ! wp_verify_nonce( 'hmg_save_gallery_images_nonce', 'hmg_save_gallery_images' ) )
+	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
+		return; 
+
+	if ( ! check_admin_referer( 'hmg_save_gallery_images', 'hmg_save_gallery_images_nonce' ) )
 		return;
 
 	if ( null == $post_id )
