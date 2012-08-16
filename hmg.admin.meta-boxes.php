@@ -18,11 +18,16 @@ function hmg_gallery_meta_box( $post ) {
 
 	hm_add_image_html_custom( 'hmg_gallery_images', 'Add Gallery Images', $post_image_id, $image_ids, 'sortable', 'width=150&height=150&crop=1', '' );
 
+	wp_nonce_field( 'hmg_save_gallery_images', 'hmg_save_gallery_images_nonce' );
+
 }
 
 function hmg_gallery_meta_box_submitted( $post_id ) {
 
-	if( null == $post_id )
+	if ( ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) || ! wp_verify_nonce( 'hmg_save_gallery_images_nonce', 'hmg_save_gallery_images' ) )
+		return;
+
+	if ( null == $post_id )
 		$post_id = get_the_id();
 
 	$gallery_images = array();
