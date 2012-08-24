@@ -1,4 +1,5 @@
 <?php
+
 include_once('hmg.admin.meta-boxes.php');
 
 function hmg_register_settings() {
@@ -33,13 +34,9 @@ add_action( 'admin_menu', 'hmg_add_meta_boxes' );
 *	Save the gallery when we save the post.
 */
 function hmg_insert_post( $post_id, $post ) {
-		
-	if( ! in_array( $post->post_type, get_option( 'hmg_post_type', array('hmg-entry') ) ) )
-		return;
-		
-	hmg_gallery_meta_box_submitted( $post_id );
-	
-	return;
+
+	if ( in_array( $post->post_type, get_option( 'hmg_post_type', array('hmg-entry') ) ) )
+		hmg_gallery_meta_box_submitted( $post_id );
 		
 }
 add_action( 'wp_insert_post', 'hmg_insert_post', 10, 2 );

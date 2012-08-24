@@ -24,7 +24,7 @@ function hmg_gallery_meta_box( $post ) {
 
 function hmg_gallery_meta_box_submitted( $post_id ) {
 
-	if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE )
+	if ( ! isset( $_POST['hmg_gallery_images'] ) || ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) )
 		return; 
 
 	if ( ! check_admin_referer( 'hmg_save_gallery_images', 'hmg_save_gallery_images_nonce' ) )
@@ -33,10 +33,7 @@ function hmg_gallery_meta_box_submitted( $post_id ) {
 	if ( null == $post_id )
 		$post_id = get_the_id();
 
-	$gallery_images = array();
-
-	if ( isset( $_POST['hmg_gallery_images'] ) )
-		$gallery_images = explode( ',', $_POST['hmg_gallery_images'] );
+	$gallery_images = explode( ',', $_POST['hmg_gallery_images'] );
 
 	if( ! $gallery_images && ! is_array( $gallery_images ) )
 		return; 
