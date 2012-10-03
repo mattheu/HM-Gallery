@@ -24,13 +24,6 @@ function hmg_check_plugin_compatibility() {
 	$php_version = phpversion();
 	
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );  
-
-
-	// Only do this if hm is already available.
-	if( ! function_exists( 'hm' ) ) {
-		deactivate_plugins(HMG_PATH . '/plugin.php'); 
-		die('HM Core is required to use this plugin.');
-	}
 	
 	if( version_compare( $wp_version, '3.0', '<') ) {
 		deactivate_plugins(HMG_PATH . '/plugin.php'); 
