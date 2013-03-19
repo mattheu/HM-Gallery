@@ -22,13 +22,15 @@ function hmg_check_plugin_compatibility() {
 	// check compatibility
 	global $wp_version;
 	$php_version = phpversion();
-	
+
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );  
 	
-	if( version_compare( $wp_version, '3.0', '<') ) {
+	if ( ! defined( 'HM_CORE_SLUG' ) ) {
+		die( 'Requires HM Core' );
+	} elseif ( version_compare( $wp_version, '3.0', '<') ) {
 		deactivate_plugins(HMG_PATH . '/plugin.php'); 
 		die('HM Gallery 0.9.7+ requires WordPress 3.0+, please download HM Gallery 0.9.6 <a href="http://downloads.wordpress.org/plugin/hmg-gallery.0.9.6.zip">here</a> for older versions of WordPress. ');
-  	} elseif( version_compare( $php_version, '5', '<') ) {
+  	} elseif ( version_compare( $php_version, '5', '<') ) {
   		deactivate_plugins(HMG_PATH . '/plugin.php'); 
 		die('HM Gallery requires PHP 5+');
   	}
